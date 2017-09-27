@@ -6,13 +6,15 @@ import GamePlayTimer from './gamePlayTimer.jsx'
 
 const Pictionary = (props) => {
   return (
-    <div id="whole">
+    <div>
       <GamePlayTimer/>
-      <section className="sidebar">
-        <UserBox />
-        <ChatBox />
-      </section>
-      <Canvas />
+      <div id="whole">
+        <div className="sidebar">
+          <UserBox />
+          <ChatBox />
+        </div>
+        <Canvas />
+      </div>
     </div>
   );
 };

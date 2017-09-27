@@ -21,6 +21,9 @@ const userArr = [];
 
 io.on('connection', (socks) => {
 
+  userArr.push(socks.id);
+  console.log(userArr, 'userArr');
+  
 	socks.on('drawing', (drawData) => {
 		io.emit('drawing', drawData);
 	});
@@ -31,8 +34,7 @@ io.on('connection', (socks) => {
   });
 
   socks.on('user id', () => {
-    userArr.push(socks.id);
-    console.log(userArr, 'userArr');
+
     io.emit('user id', userArr);
     console.log("user id emitting", userArr);
   });

@@ -55,9 +55,9 @@ class App extends React.Component {
             <Header authenticated={this.state.authenticated} />
             <div className="main-content" style={{padding: "1rem"}} >
               <div className="workspace" >
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/logout" component={Logout} />
-                <Route exact path="/pictionary" component={Pictionary} />
+                <Route path="/login" component={Login} />
+                <Route path="/logout" component={Logout} />
+                <Route path="/pictionary" component={Pictionary} />
               </div>
             </div>
           </div>
