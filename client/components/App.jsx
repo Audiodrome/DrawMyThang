@@ -4,10 +4,7 @@ import { Spinner } from '@blueprintjs/core';
 import Header from './Header.jsx';
 import Login from './Login.jsx';
 import Logout from './Logout.jsx';
-import ChatBox from './chatBox.jsx';
-import Canvas from './canvas.jsx';
-import UserBox from './userBox.jsx';
-import GamePlayTimer from './gamePlayTimer.jsx'
+import Pictionary from './Pictionary.jsx';
 import { app, base } from '../../env/base.jsx';
 
 //import openSocket from 'socket.io-client';
@@ -60,18 +57,12 @@ class App extends React.Component {
               <div className="workspace" >
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/logout" component={Logout} />
+                <Route exact path="/pictionary" component={Pictionary} />
               </div>
             </div>
           </div>
         </BrowserRouter>
-        <GamePlayTimer/>
-      <div id="whole">
-        <section className="sidebar">
-          <UserBox />
-          <ChatBox />
-        </section>
-        <Canvas />
-      </div>
+        
       </div>
     );
   }
